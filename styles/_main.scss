@@ -1,0 +1,125 @@
+body {
+	background: url(../images/bg-pattern-top-desktop.svg) no-repeat top left, url(../images/bg-pattern-bottom-desktop.svg) no-repeat bottom left;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-family: $ff;
+}
+
+main {
+	margin: 2rem 0;
+	width: 90%;
+	max-width: 1100px;
+	#sec1 {
+		display: grid;
+		grid-template-columns: 5fr 6fr;
+	}
+}
+
+#sec1Text {
+	h1 {
+		font-size: 3rem;
+		color: $clr1;
+		max-width: 90%;
+		line-height: 1;
+	}
+	p {
+		max-width: 90%;
+		font-size: .9rem;
+		color: $clr4;
+		margin-top: 1rem;
+	}
+}
+
+#ratingMain {
+	.rating_div {
+		background: $clr3;
+		font-weight: 700;
+		color: $clr1;
+		padding: 1rem 0 1rem 2rem;
+		border-radius: 10px;
+		width: 80%;
+		display: flex;
+		align-items: center;
+
+		&:first-child {
+			margin-right: auto;
+		}
+		&:nth-child(2) {
+			margin: auto;
+		}
+		&:last-child {
+			margin-left: auto;
+		}
+		.rating_text {
+			font-size: .8rem;
+			margin-left: 2rem;
+		}
+	}
+	.rating_div + .rating_div {
+		margin-top: 1rem;
+	}
+}
+
+// Cards Section
+#cards {
+	margin-top: 3rem;
+	display: flex;
+	flex-direction: row;
+	gap: 2rem;
+	.card {
+		background: $clr1;
+		width: 33.33%;
+		border-radius: 5px;
+		padding: 2.5rem 2rem;
+		&:first-child {
+			margin-top: -1rem;
+			margin-bottom: 1rem;
+		}
+		&:nth-child(3) {
+			margin-top: 1rem;
+			margin-bottom: -1rem;
+		}
+	}
+}
+
+.card_header {
+	display: flex;
+	align-items: center;
+	.buyer_img {
+		width: 3rem;
+		border-radius: 100%;
+	}
+	.card_header_text_div {
+		display: flex;
+		flex-direction: column;
+		margin-left: 1.5rem;
+		font-size: .8rem;
+		.buyer_name {
+			color: #fff;
+			font-weight: 700;
+		}
+		.verified_buyer_tag {
+			font-weight: 400;
+			color: $clr2;
+		}
+	}
+}
+.buyer_review {
+	color: #fff;
+	font-size: .8rem;
+	margin-top: 1rem;
+}
+
+.attribution {
+	margin-top: 2rem;
+	background: $clr3;
+	width: fit-content;
+	a {
+		font-weight: 700;
+		&:hover, &:active {
+			color: $clr2;
+		}
+	}
+}
